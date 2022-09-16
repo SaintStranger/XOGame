@@ -24,7 +24,7 @@ class GameFinishedState: GameState {
         gameViewController?.winnerLabel.isHidden = false
         
         if let winner = winner {
-            gameViewController?.winnerLabel.text = winnerName(from: winner) + "win"
+            gameViewController?.winnerLabel.text = winnerName(from: winner) + " " + "won"
         } else {
             gameViewController?.winnerLabel.text = "tie"
         }

@@ -17,17 +17,20 @@ class PlayerInputState: GameState {
     private(set) weak var gameViewController: GameViewController?
     private(set) weak var gameboard: Gameboard?
     private(set) weak var gameboardView: GameboardView?
+    private(set) weak var invoker: PlayerMoveInvoker?
     
     init(player: Player,
          gameViewController: GameViewController,
          gameboard: Gameboard,
          gameboardView: GameboardView,
-         markViewPrototype: MarkView) {
+         markViewPrototype: MarkView,
+         invoker: PlayerMoveInvoker) {
         self.player = player
         self.gameViewController = gameViewController
         self.gameboard = gameboard
         self.gameboardView = gameboardView
         self.markViewPrototype = markViewPrototype
+        self.invoker = invoker
     }
     
     func begin() {

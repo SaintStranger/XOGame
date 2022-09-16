@@ -13,3 +13,8 @@ class Logger {
         print(message)
     }
 }
+
+func Log(action: LogAction) {
+    let command = LogCommand(action: action)
+    LoggerInvoker.shared.addLogCommand(command)
+}
